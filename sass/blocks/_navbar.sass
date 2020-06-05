@@ -4,6 +4,7 @@
   top: 0
   width: 100%
   background-color: #fff
+  z-index: 2
   &-wrap
     display: flex
     align-items: center
@@ -75,6 +76,18 @@
     display: block
     font-size: 14px
     color: $text-color-light
-
+@media all and (max-width: 991px)
+  .navbar
+    &__mobile, &__landline
+      display: none
+@media all and (max-width: 575px)
+  .navbar
+    &__logo
+      display: none
+  .menu
+    &__nav
+      flex-direction: column
+    &__link
+      margin-bottom: 10px
 
 
