@@ -1,0 +1,75 @@
+.footer
+  padding: 40px 0
+  background-color: #262626
+  color: #fff
+  &-block
+    display: flex
+    justify-content: space-between
+  a
+    color: #fff
+    text-decoration: none
+  &__title
+    margin-top: 8px
+    margin-bottom: 8px
+    font-size: 18px
+    text-transform: uppercase
+    +bold
+  &__subtitle
+    display: block
+    margin-bottom: 48px
+  &__copyright
+    color: #767676
+  &__pay
+    &-info
+      display: flex
+      justify-content: center
+    &-logo
+      width: 5.5rem
+      height: 3.5rem
+      display: inline-block
+      margin: 15px
+  &__contacts
+    text-align: right
+  &__phone
+    font-size: 20px
+    +bold
+    display: block
+    margin-bottom: 19px
+  &__email
+    display: block
+    margin-bottom: 23px
+  &-social
+    display: flex
+    justify-content: flex-end
+    &__link
+      width: 24px
+      height: 24px
+      background-color: #fff
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-right: 15px
+      &:last-child
+        margin-right: 0
+      i
+        color: #000
+@media all and (max-width: 991px)
+  .footer
+    &-block
+      flex-direction: column
+      align-items: center
+      text-align: center
+    &__subtitle
+      margin-bottom: 10px
+    &-social
+      justify-content: center
+    &__email
+      text-align: center
+    &__contacts
+      margin-top: 30px
+@media all and (max-width: 500px)
+  .footer
+    &__pay
+      &-info
+        flex-direction: column
+
