@@ -9,19 +9,23 @@
     display: block
     font-size: 21px
     margin-bottom: 48px
-
-.offer-block
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1)
-  padding: 80px
-  margin-top: -200px
-  background: #fff url('../img/offer/offer-bg.jpg') no-repeat right top
-  background-size: contain
+    max-width: 800px
+  &__block
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1)
+    padding: 80px
+    margin-top: -200px
+  &__block-calc
+    background: #fff url('../img/offer/offer-bg-calc.jpg') no-repeat right top
+    background-size: contain
+  &__block-price_bg
+    background: #fff url('../img/offer/offer-bg.png') no-repeat right top
+    background-size: contain
 .form
   &__row
     display: flex
     align-items: center
     max-width: 900px
-    margin-bottom: 25px
+    margin-bottom: 30px
     &:last-child
       margin-bottom: 0
   &__label
@@ -34,6 +38,8 @@
       border-right: 1px solid #ddd
     &:last-child input.form__button
       border-right: none
+    &-price
+      flex-basis: 66.67%
   &__input
     width: 100%
     border-right: none
@@ -41,31 +47,44 @@
     height: 80px
     width: 100%
     cursor: pointer
+  &__policy
+    display: block
+    margin-left: 40px
+    max-width: 400px
+    font-size: 17px
 @media all and (max-width: 1199px)
   .offer-block
     background-position: right -120px top
+@media all and (max-width: 991px)
+  .offer
+    &__block
+      background: none
+      background-color: #fff
+      padding: 40px
+      margin-top: -300px
+    &__block-price_bg
+      margin-top: -170px
 @media all and (max-width: 767px)
   .offer
     &__title
       font-size: 18px
     &__subtitle
       font-size: 16px
-  .offer-block
-    background: none
-    background-color: #fff
-    padding: 40px
-    margin-top: -300px
   .form
     &__row
       flex-direction: column
       &-checkbox
         flex-direction: row
-    &__group
+    &__group,
+    &__group-price
       flex-basis: 100%
       width: 100%
     &__input 
       border-right: 1px solid #ddd
       margin-bottom: 20px
+    &__policy
+      margin-left: 0
+      margin-top: 30px
 @media all and (max-width: 480px)
   .form
     &__row

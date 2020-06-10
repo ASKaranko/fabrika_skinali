@@ -366,14 +366,23 @@ img {
   display: block;
   font-size: 21px;
   margin-bottom: 48px;
+  max-width: 800px;
 }
 
-.offer-block {
+.offer__block {
   -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
           box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
   padding: 80px;
   margin-top: -200px;
-  background: #fff url("../img/offer/offer-bg.jpg") no-repeat right top;
+}
+
+.offer__block-calc {
+  background: #fff url("../img/offer/offer-bg-calc.jpg") no-repeat right top;
+  background-size: contain;
+}
+
+.offer__block-price_bg {
+  background: #fff url("../img/offer/offer-bg.png") no-repeat right top;
   background-size: contain;
 }
 
@@ -385,7 +394,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   max-width: 900px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .form__row:last-child {
@@ -411,6 +420,11 @@ img {
   border-right: none;
 }
 
+.form__group-price {
+  -ms-flex-preferred-size: 66.67%;
+      flex-basis: 66.67%;
+}
+
 .form__input {
   width: 100%;
   border-right: none;
@@ -422,9 +436,28 @@ img {
   cursor: pointer;
 }
 
+.form__policy {
+  display: block;
+  margin-left: 40px;
+  max-width: 400px;
+  font-size: 17px;
+}
+
 @media all and (max-width: 1199px) {
   .offer-block {
     background-position: right -120px top;
+  }
+}
+
+@media all and (max-width: 991px) {
+  .offer__block {
+    background: none;
+    background-color: #fff;
+    padding: 40px;
+    margin-top: -300px;
+  }
+  .offer__block-price_bg {
+    margin-top: -170px;
   }
 }
 
@@ -434,12 +467,6 @@ img {
   }
   .offer__subtitle {
     font-size: 16px;
-  }
-  .offer-block {
-    background: none;
-    background-color: #fff;
-    padding: 40px;
-    margin-top: -300px;
   }
   .form__row {
     -webkit-box-orient: vertical;
@@ -453,7 +480,7 @@ img {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .form__group {
+  .form__group, .form__group-price {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     width: 100%;
@@ -461,6 +488,10 @@ img {
   .form__input {
     border-right: 1px solid #ddd;
     margin-bottom: 20px;
+  }
+  .form__policy {
+    margin-left: 0;
+    margin-top: 30px;
   }
 }
 
@@ -883,5 +914,40 @@ img {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.factory-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.factory-block__image {
+  margin-right: 70px;
+  margin-top: 20px;
+}
+
+.factory-block__text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  font-size: 20px;
+}
+
+@media all and (max-width: 991px) {
+  .factory-block__image {
+    margin-right: 0;
+  }
+  .factory-block__text {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
