@@ -75,7 +75,18 @@
             <div class="form__row">
               <div class="form__group">
                 <label for="" class="form__label">Вид стекла</label>
-                <input type="text" class="input form__input">
+                <!-- <select name="" id="">
+                  <option value="С печатью" selected>C печатью</option>
+                  <option value="Без печати">Без печати</option>
+                </select> -->
+                <input type="hidden" name="type" value="С печатью" id="select-type">
+                <div class="select form__select">
+                  <div class="select__checked">С печатью</div>
+                  <ul class="select__dropdown">
+                    <li class="select__option" data-value="C Печатью">C Печатью</li>
+                    <li class="select__option" data-value="Без печати">Без печати</li>
+                  </ul>
+                </div>
               </div>
               <div class="form__group">
                 <label for="" class="form__label">Ширина, см</label>
@@ -681,43 +692,6 @@
 <script src="./js/jquery.twentytwenty.js"></script>
 <script src="./js/jquery.event.move.js"></script>
 <script src="./js/slick.min.js"></script>
-<script>
-  $(window).load(function() {
-    $(".before-after").twentytwenty(
-      {
-        before_label: 'Без скинали', // Set a custom before label
-        after_label: 'Со скинали' // Set a custom after label
-      }
-    );
-    $('.before-slider').slick({
-      draggable: false,
-      dots: true,
-      dotsClass: 'before-slider__dots',
-      prevArrow: $('.arrow-left'),
-      nextArrow: $('.arrow-right'),
-      responsive: [
-        {
-          breakpoint: 1200,
-          settings: {
-            touchMove: false,
-            draggable: false,
-            swipe: false,
-            adaptiveHeight: true
-          }
-        },
-        {
-          breakpoint: 900,
-          settings: {
-            arrows: false,
-            touchMove: false,
-            draggable: false,
-            swipe: false,
-            adaptiveHeight: true
-          }
-        }
-      ]
-    });
-});
-</script>
+<script src="./js/main.js"></script>
 </body>
 </html>

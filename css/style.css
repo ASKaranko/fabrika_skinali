@@ -233,6 +233,63 @@ img {
   background-color: #507fe1;
 }
 
+.select {
+  height: 80px;
+  padding-left: 30px;
+  border: 1px solid #ddd;
+  width: 100%;
+  border-right: none;
+  position: relative;
+}
+
+.select::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-top: .2rem solid #ddd;
+  border-left: .2rem solid #ddd;
+  -webkit-transform: translateY(-50%) rotate(-135deg);
+          transform: translateY(-50%) rotate(-135deg);
+}
+
+.select:hover {
+  cursor: pointer;
+}
+
+.select__checked {
+  line-height: 80px;
+  padding-left: 30px;
+}
+
+.select__dropdown {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  display: none;
+}
+
+.select__dropdown_open {
+  display: block;
+}
+
+.select__option {
+  padding: 20px;
+}
+
+.select__option:hover {
+  background-color: #f1f1f1;
+}
+
 .checkbox-label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,8 +395,8 @@ img {
 }
 
 .menu_active {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
   opacity: 1;
 }
 
@@ -381,6 +438,14 @@ img {
   border-left: 1px solid rgba(81, 11, 186, 0.1);
   height: 80px;
   width: 70px;
+}
+
+.menu-button:hover {
+  cursor: pointer;
+}
+
+.menu-button:focus {
+  outline: none;
 }
 
 .menu-button__line {
@@ -698,6 +763,13 @@ img {
   position: relative;
   -webkit-box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
           box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.catalog-card:hover .catalog-card__buttons {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .catalog-card__image {
@@ -734,6 +806,11 @@ img {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 @media all and (max-width: 1199px) {

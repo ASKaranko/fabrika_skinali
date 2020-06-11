@@ -18,6 +18,11 @@
     max-width: 570px
     position: relative
     box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1)
+    overflow: hidden // Позволяет карточке появлятся снизу, но не за пределами
+    &:hover
+      .catalog-card__buttons
+        opacity: 1
+        transform: translateY(0%)
     &__image
       display: block
     &__tag
@@ -42,6 +47,9 @@
       right: 0
       display: flex
       justify-content: flex-end
+      opacity: 0 // Выезжающие кнопки при наведении, скрыты по умолчанию
+      transition: 0.2s
+      transform: translateY(100%)
 @media all and (max-width: 1199px)
   .catalog
     &-card
