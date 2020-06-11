@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <script src="https://kit.fontawesome.com/08d8e3d3d1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/twentytwenty.css">
 </head>
 <body>
   
@@ -458,6 +459,43 @@
     </section>
     <!-- /.section steps --> 
 
+    <section class="section before">
+      <div class="container">
+        <h2 class="section-title section__title">До и после</h2>
+        <!-- /.section-title section__title -->
+        <div class="before-slider-wrap">
+          <div class="before-slider">
+            <div class="before-slider__item">
+              <div class="before-after">
+                <img src="./img/before/before.jpg" alt="image before">
+                <img src="./img/before/after.jpg" alt="image after">
+              </div>
+            </div>
+            <div class="before-slider__item">
+              <div class="before-after">
+                <img src="./img/before/before.jpg" alt="image before">
+                <img src="./img/before/after.jpg" alt="image after">
+              </div>
+            </div>
+            <div class="before-slider__item">
+              <div class="before-after">
+                <img src="./img/before/before.jpg" alt="image before">
+                <img src="./img/before/after.jpg" alt="image after">
+              </div>
+            </div>
+          </div>
+          <div class="before-slider-arrows">
+            <button class="arrow arrow-left"></button>
+            <button class="arrow arrow-right"></button>
+          </div>
+        </div>
+        <!-- /.before-slider-wrap -->
+        
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section before -->
+
     <section class="section reviews">
       <div class="container">
         <h2 class="section-title section__title">Отзывы наших клиентов</h2>
@@ -639,5 +677,47 @@
 
 <!-- Подключение виджета обратной связи через социальные сети -->
 <script type="text/javascript" src="https://spikmi.com/Widget?Id=3606"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="./js/jquery.twentytwenty.js"></script>
+<script src="./js/jquery.event.move.js"></script>
+<script src="./js/slick.min.js"></script>
+<script>
+  $(window).load(function() {
+    $(".before-after").twentytwenty(
+      {
+        before_label: 'Без скинали', // Set a custom before label
+        after_label: 'Со скинали' // Set a custom after label
+      }
+    );
+    $('.before-slider').slick({
+      draggable: false,
+      dots: true,
+      dotsClass: 'before-slider__dots',
+      prevArrow: $('.arrow-left'),
+      nextArrow: $('.arrow-right'),
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            touchMove: false,
+            draggable: false,
+            swipe: false,
+            adaptiveHeight: true
+          }
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            arrows: false,
+            touchMove: false,
+            draggable: false,
+            swipe: false,
+            adaptiveHeight: true
+          }
+        }
+      ]
+    });
+});
+</script>
 </body>
 </html>

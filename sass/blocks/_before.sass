@@ -1,0 +1,69 @@
+.before
+  &-slider
+    &-wrap
+      position: relative
+      max-width: 900px
+      margin: auto
+    &__dots
+      list-style-type: none
+      margin: auto
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 0
+      margin-top: 30px
+      li
+        width: 10px
+        height: 10px
+        background-color: #d1d1d1
+        border-radius: 50%
+        margin: 5px
+        &:hover
+          cursor: pointer
+        &.slick-active
+          background-color: #5b7fda
+      button
+        display: none
+    &-arrows
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 100%
+      display: flex
+      justify-content: space-between
+      .arrow
+        cursor: pointer
+        background-color: transparent
+        border: none
+        &:focus
+          outline: none
+        &-left
+          transform: translateX(-100%)
+        &-left::before
+          content: ''
+          display: block
+          width: 27px
+          height: 27px
+          border-left: .3rem solid #7ba2e7
+          border-top: .3rem solid #7ba2e7
+          background-color: transparent
+          transform: rotate(-45deg)
+        &-right
+          transform: translateX(100%)
+        &-right::before
+          content: ''
+          display: block
+          width: 27px
+          height: 27px
+          border-left: .3rem solid #7ba2e7
+          border-top: .3rem solid #7ba2e7
+          background-color: transparent
+          transform: rotate(135deg)
+@media all and (max-width: 860px)
+  .before
+    &-slider
+      &-arrows
+        display: none
+
+        
+        
