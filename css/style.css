@@ -282,6 +282,10 @@ img {
   display: block;
 }
 
+.select__dropdown_close {
+  display: none;
+}
+
 .select__option {
   padding: 20px;
 }
@@ -398,6 +402,7 @@ img {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
   opacity: 1;
+  z-index: 2;
 }
 
 .menu__nav {
@@ -473,6 +478,26 @@ img {
 @media all and (max-width: 991px) {
   .navbar__mobile, .navbar__landline {
     display: none;
+  }
+  .menu__nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .menu__link {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .menu__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu__link {
+    margin-bottom: 10px;
   }
 }
 
