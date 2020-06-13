@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Фабрика Скинали</title>
-  <link rel="stylesheet" href="css/normalize.css">
   <script src="https://kit.fontawesome.com/08d8e3d3d1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/twentytwenty.css">
 </head>
 <body>
   
@@ -17,7 +15,7 @@
           <nav class="menu__nav">
             <a href="#" class="menu__link">ГЛАВНАЯ</a>
             <a href="#" class="menu__link">КАТАЛОГ</a>
-            <a href="#" class="menu__link">ПРОДУКЦИЯ</a>
+            <a href="#features" class="menu__link">ПРОДУКЦИЯ</a>
             <a href="#" class="menu__link">ПРИМЕРЫ РАБОТ</a>
             <a href="#" class="menu__link">ПРИМЕРКА ИЗОБРАЖЕНИЙ</a>
             <a href="#" class="menu__link">СТОИМОСТЬ ДИЛЕРАМ</a>
@@ -46,7 +44,7 @@
             <a class="navbar__phone" href="tel:+79121234567">+7 499 123-45-67</a>
             <a class="navbar__email navbar__small-text" href="mailto:info@mail.ru">info@mail.ru</a>
           </div>
-          <button class="button-o navbar__button">Получить консультацию</button>
+          <a href="#offer" class="button-o navbar__button">Получить консультацию</a>
         </div>
         <!-- /.navbar-wrap -->
       </div>
@@ -58,7 +56,7 @@
         Гарантия <br> минимальной цены <br> на скинали
       </h1>
       <span class="hero__subtitle">от 3 000 р/м<sup>2</sup></span>
-      <button class="button hero__button">Заказать скинали</button>
+      <a href="#offer" class="button hero__button">Заказать скинали</a>
      </div>
     </div>
     <!-- /.hero -->
@@ -66,7 +64,7 @@
   <!-- /.header -->
 
   <main>
-    <section class="offer bg-secondary">
+    <section class="offer bg-secondary" id="offer">
       <div class="container">
         <div class="offer-block offer__block offer__block-calc">
           <h2 class="offer__title">оставьте заявку на рассчет</h2>
@@ -90,11 +88,11 @@
               </div>
               <div class="form__group">
                 <label for="" class="form__label">Ширина, см</label>
-                <input type="text" class="input form__input">
+                <input type="number" class="input form__input">
               </div>
               <div class="form__group">
                 <label for="" class="form__label">Высота, см</label>
-                <input type="text" class="input form__input">
+                <input type="number" class="input form__input">
               </div>
             </div>
 
@@ -137,7 +135,7 @@
     </section>
     <!-- /.offer -->
 
-    <section class="features section">
+    <section class="features section" id="features">
       <div class="container">
         <h2 class="section-title section__title">Наши преимущества</h2>
         <div class="features-block">
@@ -550,7 +548,7 @@
                 <input type="text" class="input form__input" placeholder="Ваше имя">
               </div>
               <div class="form__group">
-                <input type="text" class="input form__input" placeholder="Ваш телефон">
+                <input type="tel" class="input form__input" placeholder="Ваш телефон">
               </div>
               <div class="form__group">
                 <input type="text" class="input form__input" placeholder="Ваша цена">
@@ -630,9 +628,7 @@
     </section>
     <!-- /.section contacts -->
 
-    <div class="map" id="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1131.5825811087082!2d37.765462656837734!3d55.442352023360534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aa43ab85a3e01%3A0x5fc3e1155c861c79!2z0JrQsNGI0LjRgNGB0LrQvtC1INGILiwgMjMsINCU0L7QvNC-0LTQtdC00L7QstC-LCDQnNC-0YHQutC-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDE0MjAwMQ!5e0!3m2!1sru!2sua!4v1591814271316!5m2!1sru!2sua" width="100%" height="410" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
+    <div class="map" id="map"></div>
 
     <section class="section questions">
       <div class="container">
@@ -693,5 +689,6 @@
 <script src="./js/jquery.event.move.js"></script>
 <script src="./js/slick.min.js"></script>
 <script src="./js/main.js"></script>
+<script src="./js/jquery.maskedinput.min.js"></script>
 </body>
 </html>
